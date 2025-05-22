@@ -1,6 +1,6 @@
 
 import 'package:examen_final_garcias/screens/home_screen.dart';
-import 'package:examen_final_garcias/screens/login_page.dart';
+import 'package:examen_final_garcias/screens/plat_detail_screen.dart';
 import 'package:examen_final_garcias/services/plats_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -9,7 +9,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(AppState());
 }
-//void main() => runApp(AppState());
 
 class AppState extends StatelessWidget {
 
@@ -29,12 +28,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'ProvaExamen',
+      title: 'ExamenFinal',
       initialRoute: 'home',
       routes: {
         //'login': (_) => LoginPage(),
         'home': (_) => HomeScreen(),
-        //'product': (_) => PlatDetailScreen()
+        'product': (_) => PlatDetailScreen()
       },
       theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: Colors.white,
