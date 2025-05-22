@@ -18,16 +18,8 @@ class PlatsService extends ChangeNotifier {
     final url = Uri.https(_baseUrl, 'api/plats');
     final resp = await http.get(url);
 
-    final Map<String, dynamic>? platsMap = json.decode(resp.body);
-    if (platsMap == null) return;
-
-    plats.clear();
-
-    platsMap.forEach((key, value) {
-       print('key: $key → value: $value (${value.runtimeType})');
-      final plat = Plats.fromMap(value);
-      plats.add(plat);
-    });
+  final plats = platsFromMap(resp.body);
+    if (plats == null) return;
 
     isLoading = false;
     notifyListeners();
