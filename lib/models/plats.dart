@@ -22,11 +22,11 @@ class Plats {
     });
 
     factory Plats.fromMap(Map<String, dynamic> json) => Plats(
-        id: json["id"] ?? 0,
+        id: json["id"],
         nom: json["nom"],
         descripcio: json["descripcio"],
         foto: json["foto"],
-        preu: json["preu"]?.toDouble() ?? 0,
+        preu: json["preu"]?.toDouble(),
         disponible: json["disponible"],
     );
 

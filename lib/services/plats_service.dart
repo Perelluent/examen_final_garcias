@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class PlatsService extends ChangeNotifier {
-  final String _baseUrl = 'provaexamen-66a38-default-rtdb.europe-west1.firebasedatabase.app';
+  final String _baseUrl = 'https://cac4a8048c06439a73b2.free.beeceptor.com/api/';
   final List<Plats> plats = [];
 
   bool isLoading = true;
