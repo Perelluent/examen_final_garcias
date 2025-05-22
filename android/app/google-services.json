@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1099015905732",
+    "project_id": "examenfinalpmdm",
+    "storage_bucket": "examenfinalpmdm.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1099015905732:android:bc1bd5c2d15275d6930491",
+        "android_client_info": {
+          "package_name": "com.example.examen_final_garcias"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ9vrLgdJS-7qvowGJhcf6oPyFhUmuiZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
