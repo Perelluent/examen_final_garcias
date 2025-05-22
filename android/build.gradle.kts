@@ -1,8 +1,3 @@
-plugins {
-    id("org.jetbrains.kotlin.android") version "1.8.22" apply false
-    id("com.google.gms.google-services") version "4.4.2" apply false
-}
-
 allprojects {
     repositories {
         google()
@@ -23,13 +18,4 @@ subprojects {
 
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
-}
-gradle.projectsEvaluated {
-    allprojects {
-        tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-            kotlinOptions {
-                jvmTarget = "11"
-            }
-        }
-    }
 }

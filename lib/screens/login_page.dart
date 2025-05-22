@@ -1,4 +1,5 @@
-import 'package:examen_final_garcias/providers/login_provider.dart';
+/*
+import 'package:examen_final_garcias/providers/login_form_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,7 +15,6 @@ class _LoginPageState extends State<LoginPage> {
   bool _showPassword = false;
   bool _isChecked = false;
 
-  late LoginProvider loginProvider;
 
   final RegExp emailRegExp = RegExp(r'^\w+[\w\.-]*@\w+\.\w{2,3}$');
   final RegExp contRegExp = RegExp(r'^.{6,}$'); // mínim 6 caràcters
@@ -22,7 +22,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    loginProvider = Provider.of<LoginProvider>(context);
   }
 
   @override
@@ -35,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                loginProvider.isLogin ? 'Inicia sessió' : 'Registra\'t',
+                .isLogin ? 'Inicia sessió' : 'Registra\'t',
                 style: TextStyle(fontSize: 20),
               ),
               SizedBox(height: 20),
@@ -136,4 +135,4 @@ class _LoginPageState extends State<LoginPage> {
       }
     }
   }
-}
+}*/

@@ -1,14 +1,12 @@
-import 'package:examen_final_garcias/providers/login_provider.dart';
+
 import 'package:examen_final_garcias/screens/home_screen.dart';
 import 'package:examen_final_garcias/screens/login_page.dart';
 import 'package:examen_final_garcias/services/plats_service.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
   runApp(AppState());
 }
 //void main() => runApp(AppState());
@@ -20,7 +18,6 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<PlatsService>(create: (_) => PlatsService()),
-        ChangeNotifierProvider<LoginProvider>(create: (_) => LoginProvider()),
       ],
       child: MyApp(),
     );
@@ -33,9 +30,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'ProvaExamen',
-      initialRoute: 'login',
+      initialRoute: 'home',
       routes: {
-        'login': (_) => LoginPage(),
+        //'login': (_) => LoginPage(),
         'home': (_) => HomeScreen(),
         //'product': (_) => PlatDetailScreen()
       },
